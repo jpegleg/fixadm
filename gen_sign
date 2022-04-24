@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+openssl genrsa 4096 > sign.key
+openssl rsa -in sign.key -pubout > sign.pub
