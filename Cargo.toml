@@ -1,5 +1,5 @@
 [package]
-name = "three"
+name = "fixadm"
 version = "0.1.0"
 edition = "2021"
 
@@ -17,4 +17,3 @@ blake2 = "0.9"
 base64 = "0.13"
 openssl-sys = "0.9"
 openssl = "0.10"
-futures-io = "0.3.21"
