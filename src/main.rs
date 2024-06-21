@@ -99,7 +99,7 @@ pub async fn login_handler(users: Users, body: LoginRequest) -> WebResult<impl R
             let blake2_hash = hasher.finalize();
             let encoded_hash = base64::encode(blake2_hash);
             let hash_date: DateTime<Utc> = Utc::now();
-            eprintln!("{} - fixadm_service INFO - {} - base64 BLAKE2: {:?}", hash_date, &transaction_id, &encoded_hash);
+            println!("{} - fixadm_service INFO - {} - base64 BLAKE2: {:?}", hash_date, &transaction_id, &encoded_hash);
             let key_pair = Rsa::generate(2048).unwrap();
             let blob_sign_key = PKey::from_rsa(key_pair).unwrap();
             let mut signer = Signer::new(MessageDigest::sha256(), &blob_sign_key).unwrap();
